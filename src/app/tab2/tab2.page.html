@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 2
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <form [formGroup] = "bookingForm" (ngSubmit) = "formSubmit()">
+
+    <ion-list-header> Ingrese los datos de su nueva tarea </ion-list-header>
+
+    <ion-item>
+      <ion-label> Tarea </ion-label>
+      <ion-input formControlName="name" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item ion-activated>        
+      <ion-label>Fecha para la tarea</ion-label>
+      <ion-datetime > </ion-datetime>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" shape="full" expand="block">Agendar Tarea</ion-button>
+      </ion-col>
+    </ion-row>
+    
+  </form>
+
+</ion-content>
