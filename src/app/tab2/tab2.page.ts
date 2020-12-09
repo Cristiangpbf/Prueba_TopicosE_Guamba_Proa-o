@@ -20,7 +20,7 @@ export class Tab2Page implements OnInit{
   ngOnInit() {
     this.bookingForm = this.fb.group({
       name: [''],
-      date: ['']
+      date: []
     })
   }
 
@@ -31,7 +31,7 @@ export class Tab2Page implements OnInit{
       this.aptService.createBooking(this.bookingForm.value).then(res => {
         console.log(res)
         this.bookingForm.reset();
-        this.router.navigate(['/tab1']);
+        this.router.navigateByUrl('localhost:8100/tabs/tab1')
       })
         .catch(error => console.log(error));
     }

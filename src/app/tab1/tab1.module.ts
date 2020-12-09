@@ -9,14 +9,20 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
 import { Tab1Page } from './tab1.page';
+import { Tab3Page } from '../tab3/tab3.page';
+import { Tab3PageModule } from '../tab3/tab3.module';
 
 @NgModule({
+  entryComponents: [
+    Tab3Page
+  ],
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
+    Tab3PageModule
 
     // RouterModule.forChild([
     //   {

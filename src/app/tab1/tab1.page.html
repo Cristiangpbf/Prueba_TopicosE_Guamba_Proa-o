@@ -8,22 +8,22 @@
 
 <ion-content [fullscreen]="true">
   <ion-list class="ios list-ios hydrated">
-    <ion-list-header class="ios hydrated">
+    <ion-list-header class="ios hydrated" style="font-family: Georgia, 'Times New Roman', Times, serif;">
       Tareas agendadas
     </ion-list-header>
 
     <ion-item *ngFor="let booking of Bookings" class="user-list">
       <ion-label>
-        <h5>
+        <h5 style="color: aqua;">
           <ion-icon name="person"></ion-icon> {{booking.name}}
         </h5>
-        <p>
+        <p style="color:darkkhaki">
           <ion-icon name="date"></ion-icon> {{booking.date}}
         </p>
       </ion-label>
 
       <div class="item-note" item-end>
-        <button ion-button clear [routerLink]="['/tab3/', booking.$key]">
+        <button ion-button clear (click)="editModal(booking.$key)">
           <ion-icon name="create" style="zoom:2.0"></ion-icon>
         </button>
         <button ion-button clear (click)="deleteBooking(booking.$key)">
