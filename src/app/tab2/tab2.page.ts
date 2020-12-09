@@ -31,8 +31,7 @@ export class Tab2Page implements OnInit{
       this.aptService.createBooking(this.bookingForm.value).then(res => {
         console.log(res)
         this.bookingForm.reset();
-        this.router.navigateByUrl('localhost:8100/tabs/tab1')
-      })
+        })
         .catch(error => console.log(error));
     }
   }
